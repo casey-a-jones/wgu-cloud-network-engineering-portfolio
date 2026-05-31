@@ -1,0 +1,14 @@
+:root {
+  --page-bg: #f8fafc;
+  --text-color: #1e293b;
+  --heading-color: #0f172a;
+  --muted-color: #64748b;
+  --link-color: #0369a1;
+  --accent-color: #0284c7;
+  --card-bg: #ffffff;
+  --border-color: #cbd5e1;
+  --card-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  --hero-bg:
+    radial-gradient(circle at top left, rgba(14, 165, 233, 0.22), transparent 35%),
+    linear-gradient(135deg, #e0f2fe, #f8fafc);
+}
