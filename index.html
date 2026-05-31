@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Casey Jones | Cloud & Network Engineering Portfolio</title>
+
+  <!-- Main layout and shared styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Theme stylesheet controlled by the dropdown -->
+  <link id="theme-stylesheet" rel="stylesheet" href="theme-dark.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="site-nav">
+      <h1>Casey Jones</h1>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#resume-focus">Resume Focus</a>
+        <a href="#course-portfolio">WGU Course Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="theme-picker">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select">
+          <option value="theme-dark.css">Dark</option>
+          <option value="theme-light.css">Light</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">WGU Cloud & Network Engineering | AWS Concentration</p>
+
+      <h2>Building a course-by-course cloud and network engineering portfolio.</h2>
+
+      <p>
+        This portfolio documents my progress through WGU’s B.S. in Cloud and Network
+        Engineering with an AWS concentration. Each course will have its own dedicated
+        section showing what I learned, what I built, and how previous coursework supports
+        the next step.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+
+      <p>
+        I am developing hands-on skills in cloud infrastructure, networking, Linux,
+        cybersecurity, troubleshooting, IT operations, documentation, and AWS.
+      </p>
+
+      <p>
+        My goal is to use this portfolio to show steady technical growth through each
+        WGU course while building practical projects that connect classroom learning
+        to real-world cloud and network engineering work.
+      </p>
+    </section>
+
+    <section id="resume-focus" class="card">
+      <h2>Resume Focus</h2>
+
+      <p>
+        This portfolio supports my future job search in cloud infrastructure, network
+        engineering, systems administration, cybersecurity operations, and IT service
+        management.
+      </p>
+
+      <p>
+        After graduation, my job search will be focused on Long Island, New York and
+        the surrounding New York metro area.
+      </p>
+    </section>
+
+    <section id="course-portfolio" class="card">
+      <h2>WGU Course Portfolio</h2>
+
+      <p>
+        Each WGU course will have its own dedicated page or section. Projects will live
+        inside each course instead of being listed as a separate top-level portfolio area.
+      </p>
+
+      <article class="course-card">
+        <h3>Introduction to IT – E004</h3>
+
+        <p class="status">Starting course: June 1, 2026</p>
+
+        <p>
+          This first course creates the foundation for future coursework in Linux,
+          networking, cybersecurity, cloud computing, AWS, troubleshooting, and IT operations.
+        </p>
+
+        <h4>Course Page Sections</h4>
+
+        <ul class="two-column-list">
+          <li>Course Overview</li>
+          <li>Personal Learning Goal</li>
+          <li>Key Concepts</li>
+          <li>Projects</li>
+          <li>Labs / Practice Work</li>
+          <li>Notes & Reflections</li>
+          <li>Cloud/Network Skills Connection</li>
+          <li>Employer-Ready Summary</li>
+        </ul>
+
+        <h4>First Course Project</h4>
+
+        <p>
+          <strong>IT Fundamentals Knowledge Base:</strong> a beginner-friendly technical
+          reference covering hardware, software, operating systems, networking,
+          cybersecurity, databases, cloud computing, and troubleshooting.
+        </p>
+      </article>
+
+      <article class="course-card">
+        <h3>Future Course Template</h3>
+
+        <p>
+          Future course pages will include an <strong>Applied Previous Coursework</strong>
+          section. This will explain how earlier WGU courses support the current course.
+        </p>
+
+        <h4>Standard Future Course Sections</h4>
+
+        <ul class="two-column-list">
+          <li>Course Overview</li>
+          <li>Personal Learning Goal</li>
+          <li>Key Concepts</li>
+          <li>Applied Previous Coursework</li>
+          <li>Projects</li>
+          <li>Labs / Practice Work</li>
+          <li>Notes & Reflections</li>
+          <li>Cloud/Network Skills Connection</li>
+          <li>Employer-Ready Summary</li>
+        </ul>
+
+        <h4>Examples of Cumulative Learning</h4>
+
+        <ul>
+          <li>
+            Linux Foundations will connect back to operating system and troubleshooting
+            concepts from Introduction to IT.
+          </li>
+          <li>
+            ITIL and Business of IT concepts will be applied to documentation, incidents,
+            service requests, and change management.
+          </li>
+          <li>
+            IT Foundations and future courses will show how Linux skills support
+            administration, logs, permissions, and troubleshooting.
+          </li>
+          <li>
+            Networking and AWS courses will build on earlier IT, Linux, security, and
+            service management concepts.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/casey-a-jones" target="_blank" rel="noopener noreferrer">
+          linkedin.com/in/casey-a-jones
+        </a>
+      </p>
+
+      <p>
+        GitHub: Add your GitHub profile link here.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
+  </footer>
+
+  <script>
+    const themeSelect = document.querySelector("#theme-select");
+    const themeStylesheet = document.querySelector("#theme-stylesheet");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme) {
+      themeStylesheet.setAttribute("href", savedTheme);
+      themeSelect.value = savedTheme;
+    }
+
+    themeSelect.addEventListener("change", function () {
+      const selectedTheme = themeSelect.value;
+      themeStylesheet.setAttribute("href", selectedTheme);
+      localStorage.setItem("portfolio-theme", selectedTheme);
+    });
+  </script>
+</body>
+</html>
