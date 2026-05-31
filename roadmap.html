@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>WGU Roadmap | Casey Jones</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="theme-dark.css" />
+</head>
+
+<body>
+  <header class="hero small-hero">
+    <nav class="site-nav">
+      <h1>Casey Jones</h1>
+
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#resume-focus">Resume Focus</a>
+        <a href="index.html#course-portfolio">WGU Course Portfolio</a>
+        <a href="roadmap.html">WGU Roadmap</a>
+        <a href="version-control.html">Version Control</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+
+      <div class="theme-picker">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select">
+          <option value="theme-dark.css">Dark</option>
+          <option value="theme-light.css">Light</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">WGU Progress Roadmap</p>
+      <h2>Tracking my course-by-course progress.</h2>
+      <p>
+        This page will track each WGU course, including start dates, completion dates,
+        assessment scores, projects, labs, and notes as I progress through the program.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Course Progress Tracker</h2>
+
+      <p>
+        This roadmap is a living tracker. I will update it as I begin and complete each course.
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Status</th>
+              <th>Start Date</th>
+              <th>Completion Date</th>
+              <th>Assessment / Score</th>
+              <th>Portfolio Artifact</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Introduction to IT – E004</td>
+              <td>Planned</td>
+              <td>June 1, 2026</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>IT Fundamentals Knowledge Base</td>
+              <td>Foundation course for IT, cloud, networking, security, and troubleshooting concepts.</td>
+            </tr>
+
+            <tr>
+              <td>Business of IT / ITIL</td>
+              <td>Future</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Will connect service management concepts to documentation, incidents, change management, and operations.</td>
+            </tr>
+
+            <tr>
+              <td>Linux Foundations</td>
+              <td>Future</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Will apply IT fundamentals and ITIL concepts to Linux administration and troubleshooting.</td>
+            </tr>
+
+            <tr>
+              <td>IT Foundations</td>
+              <td>Future</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Will apply previous Linux and IT operations knowledge where relevant.</td>
+            </tr>
+
+            <tr>
+              <td>Future Networking Course</td>
+              <td>Future</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Will build on IT fundamentals, Linux, security, and troubleshooting.</td>
+            </tr>
+
+            <tr>
+              <td>Future AWS / Cloud Course</td>
+              <td>Future</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>TBD</td>
+              <td>Will connect earlier coursework to cloud infrastructure and AWS services.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Roadmap Update Checklist</h2>
+
+      <ul>
+        <li>Add the course start date when I begin a course.</li>
+        <li>Add completion date when I finish a course.</li>
+        <li>Add assessment score or pass status when available.</li>
+        <li>Add the related course project or portfolio artifact.</li>
+        <li>Add notes about what the course contributed to my cloud/network engineering path.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
+  </footer>
+
+  <script>
+    const themeSelect = document.querySelector("#theme-select");
+    const themeStylesheet = document.querySelector("#theme-stylesheet");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme) {
+      themeStylesheet.setAttribute("href", savedTheme);
+      themeSelect.value = savedTheme;
+    }
+
+    themeSelect.addEventListener("change", function () {
+      const selectedTheme = themeSelect.value;
+      themeStylesheet.setAttribute("href", selectedTheme);
+      localStorage.setItem("portfolio-theme", selectedTheme);
+    });
+  </script>
+</body>
+</html>
