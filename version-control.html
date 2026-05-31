@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Version Control Tracker | Casey Jones</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="theme-dark.css" />
+</head>
+
+<body>
+  <header class="hero small-hero">
+    <nav class="site-nav">
+      <h1>Casey Jones</h1>
+
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#resume-focus">Resume Focus</a>
+        <a href="index.html#course-portfolio">WGU Course Portfolio</a>
+        <a href="roadmap.html">WGU Roadmap</a>
+        <a href="version-control.html">Version Control</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+
+      <div class="theme-picker">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select">
+          <option value="theme-dark.css">Dark</option>
+          <option value="theme-light.css">Light</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Website Version Control</p>
+      <h2>Tracking portfolio updates over time.</h2>
+      <p>
+        This page records meaningful updates to the website, including content changes,
+        design changes, new pages, course additions, and deployment milestones.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Version Control Tracker</h2>
+
+      <p>
+        GitHub tracks the technical commit history. This page summarizes the purpose
+        of each website update in plain language.
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Date</th>
+              <th>Update Type</th>
+              <th>Summary</th>
+              <th>Files Changed</th>
+              <th>GitHub Commit Message</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>v0.1</td>
+              <td>May 31, 2026</td>
+              <td>Initial Build</td>
+              <td>Created the first version of the portfolio homepage with basic sections and theme support.</td>
+              <td>index.html, styles.css, theme-dark.css, theme-light.css</td>
+              <td>Create initial portfolio website</td>
+            </tr>
+
+            <tr>
+              <td>v0.2</td>
+              <td>May 31, 2026</td>
+              <td>Deployment</td>
+              <td>Connected GitHub repository to AWS Amplify and confirmed the website is live.</td>
+              <td>README.md, Amplify deployment</td>
+              <td>Update README with deployment details</td>
+            </tr>
+
+            <tr>
+              <td>v0.3</td>
+              <td>May 31, 2026</td>
+              <td>New Pages</td>
+              <td>Added WGU roadmap and version control tracker pages.</td>
+              <td>index.html, roadmap.html, version-control.html, styles.css</td>
+              <td>Add roadmap and version control pages</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Update Categories</h2>
+
+      <ul>
+        <li><strong>Content:</strong> Changes to wording, course notes, project descriptions, or resume information.</li>
+        <li><strong>Design:</strong> Changes to layout, colors, typography, spacing, or themes.</li>
+        <li><strong>Structure:</strong> New pages, navigation updates, or course page organization.</li>
+        <li><strong>Deployment:</strong> GitHub, AWS Amplify, hosting, or publishing changes.</li>
+        <li><strong>Documentation:</strong> README updates, workflow notes, or portfolio explanations.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>How I Will Track Future Updates</h2>
+
+      <p>
+        Each time I make a meaningful website update, I will add a new row to this tracker
+        with the version number, date, update type, summary, files changed, and GitHub commit message.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
+  </footer>
+
+  <script>
+    const themeSelect = document.querySelector("#theme-select");
+    const themeStylesheet = document.querySelector("#theme-stylesheet");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme) {
+      themeStylesheet.setAttribute("href", savedTheme);
+      themeSelect.value = savedTheme;
+    }
+
+    themeSelect.addEventListener("change", function () {
+      const selectedTheme = themeSelect.value;
+      themeStylesheet.setAttribute("href", selectedTheme);
+      localStorage.setItem("portfolio-theme", selectedTheme);
+    });
+  </script>
+</body>
+</html>
