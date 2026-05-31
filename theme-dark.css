@@ -11,4 +11,6 @@
   --hero-bg:
     radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 35%),
     linear-gradient(135deg, #0f172a, #111827);
+  --table-header-bg: #1e293b;
+  --table-cell-bg: #0f172a;
 }
