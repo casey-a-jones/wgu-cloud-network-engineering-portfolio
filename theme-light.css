@@ -13,4 +13,8 @@
     linear-gradient(135deg, #e0f2fe, #f8fafc);
   --table-header-bg: #e0f2fe;
   --table-cell-bg: #ffffff;
+  --road-line-color: #cbd5e1;
+  --road-dash-color: #e2e8f0;
+  --road-edge-color: #94a3b8;
+  --road-connector-color: #94a3b8;
 }
