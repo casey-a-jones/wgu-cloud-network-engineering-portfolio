@@ -172,6 +172,199 @@ th {
 td {
   background: var(--table-cell-bg);
 }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.completed {
+  background: #22c55e;
+}
+
+.legend-dot.current {
+  background: #f59e0b;
+}
+
+.legend-dot.future {
+  background: #94a3b8;
+}
+
+.roadmap-card {
+  overflow: hidden;
+}
+
+.roadmap {
+  position: relative;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  padding: 1rem 0;
+}
+
+.road-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 18px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      var(--road-line-color) 0 60px,
+      var(--road-dash-color) 60px 90px
+    );
+  box-shadow: inset 0 0 0 4px var(--road-edge-color);
+}
+
+.road-stop {
+  position: relative;
+  width: 50%;
+  margin: 1.75rem 0;
+}
+
+.road-stop.left {
+  left: 0;
+  padding-right: 3.5rem;
+}
+
+.road-stop.right {
+  left: 50%;
+  padding-left: 3.5rem;
+}
+
+.stop-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+}
+
+.stop-card h3 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.term-label {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stop-marker {
+  position: absolute;
+  top: 1.75rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 4px solid var(--page-bg);
+  z-index: 2;
+}
+
+.road-stop.left .stop-marker {
+  right: -12px;
+}
+
+.road-stop.right .stop-marker {
+  left: -12px;
+}
+
+.road-stop.completed .stop-marker {
+  background: #22c55e;
+}
+
+.road-stop.current .stop-marker {
+  background: #f59e0b;
+}
+
+.road-stop.future .stop-marker {
+  background: #94a3b8;
+}
+
+.car-icon {
+  position: absolute;
+  top: 0.9rem;
+  font-size: 1.8rem;
+  z-index: 3;
+}
+
+.road-stop.right .car-icon {
+  left: -2.6rem;
+}
+
+.road-stop.left .car-icon {
+  right: -2.6rem;
+}
+
+.road-stop.left .stop-card::after,
+.road-stop.right .stop-card::after {
+  content: "";
+  position: absolute;
+  top: 1.6rem;
+  width: 28px;
+  height: 4px;
+  background: var(--road-connector-color);
+}
+
+.road-stop.left .stop-card::after {
+  right: -28px;
+}
+
+.road-stop.right .stop-card::after {
+  left: -28px;
+}
+
+@media (max-width: 900px) {
+  .road-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .road-stop,
+  .road-stop.left,
+  .road-stop.right {
+    width: 100%;
+    left: 0;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+
+  .road-stop .stop-marker {
+    left: 8px !important;
+    right: auto !important;
+  }
+
+  .road-stop .car-icon {
+    left: 0.2rem !important;
+    right: auto !important;
+  }
+
+  .road-stop .stop-card::after {
+    left: -28px !important;
+    right: auto !important;
+  }
+}
 
 @media (max-width: 700px) {
   .hero {
