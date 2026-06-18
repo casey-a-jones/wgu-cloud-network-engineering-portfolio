@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Business of IT - Applications – D336 | Casey Jones</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="../theme-dark.css" />
+</head>
+
+<body>
+  <header class="hero small-hero">
+    <nav class="site-nav">
+      <h1>Casey Jones</h1>
+
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#resume-focus">Resume Focus</a>
+        <a href="../index.html#course-portfolio">WGU Course Portfolio</a>
+
+        <div class="dropdown">
+          <button class="dropdown-button" type="button">Courses ▾</button>
+          <div class="dropdown-content">
+            <a href="introduction-to-it-e004.html">Introduction to IT – E004</a>
+            <a href="business-of-it-d336.html">Business of IT - Applications – D336</a>
+          </div>
+        </div>
+
+        <a href="../roadmap.html">WGU Roadmap</a>
+        <a href="../version-control.html">Version Control</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+      <div class="theme-picker">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select">
+          <option value="../theme-dark.css">Dark</option>
+          <option value="../theme-light.css">Light</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Current Course</p>
+      <h2>Business of IT - Applications – D336</h2>
+      <p>
+        This course focuses on IT service management and how technology work is organized,
+        documented, improved, and delivered as a service to users and organizations.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Course Overview</h2>
+      <p>
+        Business of IT - Applications introduces service management concepts commonly associated
+        with ITIL. The course focuses on how IT organizations manage incidents, service requests,
+        changes, problems, documentation, continual improvement, and value delivery.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Personal Learning Goal</h2>
+      <p>
+        My goal for this course is to understand how ITIL and service management concepts apply
+        to real technical work, including cloud operations, network support, system administration,
+        troubleshooting, and change control.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Applied Previous Coursework</h2>
+      <p>
+        Introduction to IT helped me understand the technical environment that IT services support,
+        including hardware, software, networks, operating systems, databases, cloud systems, security,
+        and troubleshooting.
+      </p>
+
+      <p>
+        Business of IT builds on that foundation by showing how technical work can be organized
+        into repeatable services, documented processes, support workflows, and continual improvement.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Concepts</h2>
+      <ul>
+        <li>IT service management</li>
+        <li>ITIL concepts and terminology</li>
+        <li>Incident management</li>
+        <li>Problem management</li>
+        <li>Change management</li>
+        <li>Service requests</li>
+        <li>Service value and continual improvement</li>
+        <li>Documentation and operational consistency</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+
+      <h3>ITIL Service Management Summary</h3>
+      <p>
+        This project will summarize key ITIL and IT service management concepts and explain
+        how they apply to cloud and network engineering work.
+      </p>
+
+      <p><strong>Planned Sections:</strong></p>
+      <ul>
+        <li>What ITIL is</li>
+        <li>Incident vs. problem vs. change</li>
+        <li>Service request workflow</li>
+        <li>Change management example</li>
+        <li>How ITIL applies to AWS and cloud operations</li>
+        <li>How ITIL applies to network engineering and troubleshooting</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>How This Builds My Cloud/Network Skills</h2>
+      <p>
+        Cloud and network engineers do more than configure systems. They also support services,
+        document changes, respond to incidents, troubleshoot problems, and improve reliability.
+        This course helps me connect technical skills with professional IT operations practices.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Employer-Ready Summary</h2>
+      <p>
+        Through Business of IT - Applications, I am developing a stronger understanding of IT service
+        management, documentation, incident response, change control, problem management, and continual
+        improvement. These concepts support my future work in cloud infrastructure, network engineering,
+        IT operations, and enterprise technical support.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
+  </footer>
+
+  <script>
+    const themeSelect = document.querySelector("#theme-select");
+    const themeStylesheet = document.querySelector("#theme-stylesheet");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme) {
+      const adjustedTheme = savedTheme.includes("../") ? savedTheme : "../" + savedTheme;
+      themeStylesheet.setAttribute("href", adjustedTheme);
+      themeSelect.value = adjustedTheme;
+    }
+
+    themeSelect.addEventListener("change", function () {
+      const selectedTheme = themeSelect.value;
+      themeStylesheet.setAttribute("href", selectedTheme);
+      localStorage.setItem("portfolio-theme", selectedTheme.replace("../", ""));
+    });
+  </script>
+</body>
+</html>
