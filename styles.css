@@ -60,6 +60,59 @@ a:focus {
   text-decoration: underline;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background: transparent;
+  border: none;
+  color: var(--link-color);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 1.8rem;
+  left: 0;
+  min-width: 260px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background: var(--table-header-bg);
+  color: var(--accent-color);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
 .theme-picker {
   display: flex;
   align-items: center;
