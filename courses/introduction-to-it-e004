@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Introduction to IT – E004 | Casey Jones</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="../theme-dark.css" />
+</head>
+
+<body>
+  <header class="hero small-hero">
+    <nav class="site-nav">
+      <h1>Casey Jones</h1>
+
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#resume-focus">Resume Focus</a>
+        <a href="../index.html#course-portfolio">WGU Course Portfolio</a>
+
+        <div class="dropdown">
+          <button class="dropdown-button" type="button">Courses ▾</button>
+          <div class="dropdown-content">
+            <a href="introduction-to-it-e004.html">Introduction to IT – E004</a>
+            <a href="business-of-it-d336.html">Business of IT - Applications – D336</a>
+          </div>
+        </div>
+
+        <a href="../roadmap.html">WGU Roadmap</a>
+        <a href="../version-control.html">Version Control</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+
+      <div class="theme-picker">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select">
+          <option value="../theme-dark.css">Dark</option>
+          <option value="../theme-light.css">Light</option>
+        </select>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Completed Course</p>
+      <h2>Introduction to IT – E004</h2>
+      <p>
+        This course established the foundation for my WGU Cloud and Network Engineering program
+        by introducing core information technology concepts.
+      </p>
+    </section>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Course Overview</h2>
+      <p>
+        Introduction to IT covered foundational concepts including hardware, software,
+        operating systems, networking, cybersecurity, databases, cloud computing,
+        troubleshooting, and the role of IT in modern organizations.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Personal Learning Goal</h2>
+      <p>
+        My goal for this course was to establish a solid technical baseline that I can build on
+        throughout future coursework in Linux, networking, AWS, security, automation,
+        and IT operations.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Key Concepts</h2>
+      <ul>
+        <li>Hardware and software fundamentals</li>
+        <li>Operating system basics</li>
+        <li>Networking fundamentals</li>
+        <li>Cybersecurity basics</li>
+        <li>Database and data concepts</li>
+        <li>Cloud computing overview</li>
+        <li>Troubleshooting mindset</li>
+        <li>IT roles and business technology alignment</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+
+      <h3>IT Fundamentals Knowledge Base</h3>
+      <p>
+        This project organizes beginner IT concepts into a structured reference that supports
+        future coursework in cloud computing, networking, Linux, cybersecurity, and AWS.
+      </p>
+
+      <p><strong>Tools Used:</strong> HTML, CSS, GitHub, AWS Amplify Hosting</p>
+
+      <p>
+        <strong>Concepts Applied:</strong> hardware, software, networking, security,
+        databases, cloud computing, and troubleshooting.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>How This Builds My Cloud/Network Skills</h2>
+      <p>
+        This course supports my cloud and network engineering path by introducing the core
+        components that make up IT systems. Understanding hardware, software, operating systems,
+        networking, security, databases, and troubleshooting will help me work with AWS services,
+        Linux servers, cloud infrastructure, and networked systems in future courses.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Employer-Ready Summary</h2>
+      <p>
+        Through Introduction to IT, I developed foundational knowledge in hardware, software,
+        operating systems, networking, cybersecurity, databases, cloud computing, and troubleshooting.
+        This course helped establish the technical foundation for my WGU Cloud and Network Engineering
+        program and supports my future development in AWS, networking, Linux, and IT operations.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
+  </footer>
+
+  <script>
+    const themeSelect = document.querySelector("#theme-select");
+    const themeStylesheet = document.querySelector("#theme-stylesheet");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    if (savedTheme) {
+      const adjustedTheme = savedTheme.includes("../") ? savedTheme : "../" + savedTheme;
+      themeStylesheet.setAttribute("href", adjustedTheme);
+      themeSelect.value = adjustedTheme;
+    }
+
+    themeSelect.addEventListener("change", function () {
+      const selectedTheme = themeSelect.value;
+      themeStylesheet.setAttribute("href", selectedTheme);
+      localStorage.setItem("portfolio-theme", selectedTheme.replace("../", ""));
+    });
+  </script>
+</body>
+</html>
