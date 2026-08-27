@@ -7,40 +7,45 @@
   <title>WGU Roadmap | Casey Jones</title>
 
   <link rel="stylesheet" href="styles.css" />
-  <link id="theme-stylesheet" rel="stylesheet" href="theme-dark.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="theme-toon-sketch.css" />
 </head>
 
-<body>
+<body data-theme-path="">
   <header class="hero small-hero">
     <nav class="site-nav">
       <h1>Casey Jones</h1>
 
         <div class="nav-links">
-          <a href="index.html#about">About</a>
-          <a href="index.html#resume-focus">Resume Focus</a>
-          <a href="index.html#course-portfolio">WGU Course Portfolio</a>
-      
-            <div class="dropdown">
-              <button class="dropdown-button" type="button">Courses ▾</button>
-              <div class="dropdown-content">
-                <a href="courses/introduction-to-it-e004.html">Introduction to IT – E004</a>
-                <a href="courses/business-of-it-d336.html">Business of IT - Applications – D336</a>
-                <a href="courses/linux-foundations-d281.html">Linux Foundations – D281</a>
-                <a href="courses/it-foundations-d316.html">IT Foundations – D316</a>
-                <a href="courses/it-applications-d317.html">IT Applications – D317</a>
-              </div>
-            </div>
-      
-          <a href="roadmap.html">WGU Roadmap</a>
-          <a href="version-control.html">Version Control</a>
-          <a href="index.html#contact">Contact</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#resume-focus">Resume Focus</a>
+        <a href="index.html#course-portfolio">WGU Course Portfolio</a>
+
+        <div class="dropdown">
+          <button class="dropdown-button" type="button">Courses ▾</button>
+          <div class="dropdown-content">
+            <a href="courses/introduction-to-it-e004.html">Introduction to IT – E004</a>
+            <a href="courses/business-of-it-d336.html">Business of IT - Applications – D336</a>
+            <a href="courses/linux-foundations-d281.html">Linux Foundations – D281</a>
+            <a href="courses/it-foundations-d316.html">IT Foundations – D316</a>
+            <a href="courses/it-applications-d317.html">IT Applications – D317</a>
+          </div>
         </div>
+
+        <a href="certifications.html">Certifications</a>
+        <a href="roadmap.html">WGU Roadmap</a>
+        <a href="version-control.html">Version Control</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
 
       <div class="theme-picker">
         <label for="theme-select">Theme</label>
         <select id="theme-select">
-          <option value="theme-dark.css">Dark</option>
-          <option value="theme-light.css">Light</option>
+          <option value="theme-blueprint-grid.css">[1] Blueprint Grid</option>
+          <option value="theme-brutalist-server.css">[2] Brutalist Server</option>
+          <option value="theme-cosmic-console.css">[3] Cosmic Console</option>
+          <option value="theme-dark.css">[4] Dark</option>
+          <option value="theme-electron-schematic.css">[5] Electron Schematic</option>
+          <option value="theme-toon-sketch.css" selected>[6] Toon Sketch</option>
         </select>
       </div>
     </nav>
@@ -99,8 +104,8 @@
             <p><strong>CUs:</strong> 3</p>
             <p><strong>Start:</strong> June 1, 2026</p>
             <p><strong>Completion:</strong> June 17, 2026</p>
-            <p><strong>Objective Assessment / Score:</strong> PASS - June 11, 2026</p>
-            <p><strong>Performance Assessment / Score:</strong> PASS - June 17, 2026</p>
+            <p><strong>Objective Assessment:</strong> Passed June 11, 2026</p>
+            <p><strong>Performance Assessment:</strong> Passed June 17, 2026</p>
             <p><strong>Artifact:</strong> IT Fundamentals Knowledge Base</p>
             <p><strong>Notes:</strong> Completed the foundational IT course covering hardware, software, operating systems, networking, security, databases, cloud computing, and troubleshooting.</p>
           </div>
@@ -115,7 +120,7 @@
             <p><strong>CUs:</strong> 4</p>
             <p><strong>Start:</strong> June 17, 2026</p>
             <p><strong>Completion:</strong> July 4, 2026</p>
-            <p><strong>Assessment / Score:</strong> ITIL 4 Foundations Exam, PASS - 33/40</p>
+            <p><strong>Certification Earned:</strong> ITIL 4 Foundation, July 4, 2026</p>
             <p><strong>Artifact:</strong> ITIL service management summary</p>
             <p><strong>Notes:</strong> Completed course focused on IT service management, ITIL concepts, incidents, service requests, change management, documentation, and operational support.</p>
           </div>
@@ -130,7 +135,7 @@
             <p><strong>CUs:</strong> 3</p>
             <p><strong>Start:</strong> July 4, 2026</p>
             <p><strong>Completion:</strong> July 12, 2026</p>
-            <p><strong>Assessment / Score:</strong> LPI Linux Essentials, PASS - 100/100</p>
+            <p><strong>Certification Earned:</strong> LPI Linux Essentials, July 12, 2026</p>
             <p><strong>Artifact:</strong> Linux command-line reference</p>
             <p><strong>Notes:</strong> Completed course focused on Linux fundamentals, command-line usage, file systems, permissions, users, processes, logs, and troubleshooting.</p>
           </div>
@@ -145,7 +150,7 @@
             <p><strong>CUs:</strong> 4</p>
             <p><strong>Start:</strong> July 12, 2026</p>
             <p><strong>Completion:</strong> August 25, 2026</p>
-            <p><strong>Assessment / Score:</strong> CompTIA A+ Core 1 220-1201, PASS - 832/900</p>
+            <p><strong>Exam Passed:</strong> CompTIA A+ Core 1 220-1201, August 25, 2026</p>
             <p><strong>Artifact:</strong> CompTIA A+ fundamentals tracker</p>
             <p><strong>Notes:</strong> Completed course focused on foundational IT support knowledge, hardware, operating systems, troubleshooting, networking basics, security basics, and professional technical support skills.</p>
           </div>
@@ -159,9 +164,9 @@
             <h3>IT Applications – D317</h3>
             <p><strong>Status:</strong> In Progress</p>
             <p><strong>CUs:</strong> 4</p>
-            <p><strong>Start:</strong> August 26, 2026</p>
+            <p><strong>Start:</strong> March 26, 2026</p>
             <p><strong>Completion:</strong> TBD</p>
-            <p><strong>Assessment / Score:</strong> CompTIA A+ Core 2 220-1202, TBD</p>
+            <p><strong>Certification Goal:</strong> CompTIA A+ Core 2 220-1202, TBD</p>
             <p><strong>Artifact:</strong> CompTIA A+ Core 2 tracker</p>
             <p><strong>Notes:</strong> Accelerated into Term 1. Current course continues the CompTIA A+ path with practical IT application topics such as operating systems, software troubleshooting, security, operational procedures, and technical support.</p>
           </div>
@@ -388,22 +393,6 @@
   <footer>
     <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
   </footer>
-
-  <script>
-    const themeSelect = document.querySelector("#theme-select");
-    const themeStylesheet = document.querySelector("#theme-stylesheet");
-    const savedTheme = localStorage.getItem("portfolio-theme");
-
-    if (savedTheme) {
-      themeStylesheet.setAttribute("href", savedTheme);
-      themeSelect.value = savedTheme;
-    }
-
-    themeSelect.addEventListener("change", function () {
-      const selectedTheme = themeSelect.value;
-      themeStylesheet.setAttribute("href", selectedTheme);
-      localStorage.setItem("portfolio-theme", selectedTheme);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

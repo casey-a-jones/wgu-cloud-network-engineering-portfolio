@@ -7,10 +7,10 @@
   <title>Version Control Tracker | Casey Jones</title>
 
   <link rel="stylesheet" href="styles.css" />
-  <link id="theme-stylesheet" rel="stylesheet" href="theme-dark.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="theme-toon-sketch.css" />
 </head>
 
-<body>
+<body data-theme-path="">
   <header class="hero small-hero">
     <nav class="site-nav">
       <h1>Casey Jones</h1>
@@ -19,18 +19,19 @@
         <a href="index.html#about">About</a>
         <a href="index.html#resume-focus">Resume Focus</a>
         <a href="index.html#course-portfolio">WGU Course Portfolio</a>
-    
-          <div class="dropdown">
-            <button class="dropdown-button" type="button">Courses ▾</button>
-            <div class="dropdown-content">
-              <a href="courses/introduction-to-it-e004.html">Introduction to IT – E004</a>
-              <a href="courses/business-of-it-d336.html">Business of IT - Applications – D336</a>
-              <a href="courses/linux-foundations-d281.html">Linux Foundations – D281</a>
-              <a href="courses/it-foundations-d316.html">IT Foundations – D316</a>
-              <a href="courses/it-applications-d317.html">IT Applications – D317</a>
-            </div>
+
+        <div class="dropdown">
+          <button class="dropdown-button" type="button">Courses ▾</button>
+          <div class="dropdown-content">
+            <a href="courses/introduction-to-it-e004.html">Introduction to IT – E004</a>
+            <a href="courses/business-of-it-d336.html">Business of IT - Applications – D336</a>
+            <a href="courses/linux-foundations-d281.html">Linux Foundations – D281</a>
+            <a href="courses/it-foundations-d316.html">IT Foundations – D316</a>
+            <a href="courses/it-applications-d317.html">IT Applications – D317</a>
           </div>
-    
+        </div>
+
+        <a href="certifications.html">Certifications</a>
         <a href="roadmap.html">WGU Roadmap</a>
         <a href="version-control.html">Version Control</a>
         <a href="index.html#contact">Contact</a>
@@ -39,8 +40,12 @@
       <div class="theme-picker">
         <label for="theme-select">Theme</label>
         <select id="theme-select">
-          <option value="theme-dark.css">Dark</option>
-          <option value="theme-light.css">Light</option>
+          <option value="theme-blueprint-grid.css">[1] Blueprint Grid</option>
+          <option value="theme-brutalist-server.css">[2] Brutalist Server</option>
+          <option value="theme-cosmic-console.css">[3] Cosmic Console</option>
+          <option value="theme-dark.css">[4] Dark</option>
+          <option value="theme-electron-schematic.css">[5] Electron Schematic</option>
+          <option value="theme-toon-sketch.css" selected>[6] Toon Sketch</option>
         </select>
       </div>
     </nav>
@@ -163,7 +168,7 @@
               <td>v1.0</td>
               <td>July 4, 2026</td>
               <td>Content / Structure</td>
-              <td>Updated the roadmap to mark D336 Business of IT - Applications as completed, recorded the ITIL 4 Foundations exam result, moved the current course marker to D281 Linux Foundations, and added a dedicated Linux Foundations course page.</td>
+              <td>Updated the roadmap to mark D336 Business of IT - Applications as completed, recorded the ITIL 4 Foundation earned date, moved the current course marker to D281 Linux Foundations, and added a dedicated Linux Foundations course page.</td>
               <td>roadmap.html, version-control.html, courses/business-of-it-d336.html, courses/linux-foundations-d281.html, index.html</td>
               <td>Update roadmap and add Linux Foundations course page</td>
             </tr>
@@ -181,11 +186,19 @@
               <td>v1.2</td>
               <td>August 27, 2026</td>
               <td>Content / Structure</td>
-              <td>Updated the roadmap to mark D316 IT Foundations as completed, recorded the CompTIA A+ Core 1 220-1201 result of 832/900, accelerated D317 IT Applications into Term 1, moved the current course marker to D317, and added a dedicated IT Applications course page.</td>
+              <td>Updated the roadmap to mark D316 IT Foundations as completed, recorded the CompTIA A+ Core 1 220-1201 pass date, accelerated D317 IT Applications into Term 1, moved the current course marker to D317, and added a dedicated IT Applications course page.</td>
               <td>roadmap.html, version-control.html, courses/it-foundations-d316.html, courses/it-applications-d317.html, index.html</td>
               <td>Update roadmap and add IT Applications course page</td>
             </tr>
-          </tbody>
+            <tr>
+              <td>v1.3</td>
+              <td>August 27, 2026</td>
+              <td>Design / Structure</td>
+              <td>Refreshed the website design, added a Certifications page, improved shared theme handling, made Toon Sketch the default theme, and expanded the selectable theme collection with distinct visual styles including Electron Schematic.</td>
+              <td>index.html, roadmap.html, certifications.html, version-control.html, course pages, README.md, styles.css, script.js, theme files</td>
+              <td>Refresh site design and expand themes</td>
+            </tr>
+</tbody>
         </table>
       </div>
     </section>
@@ -215,22 +228,6 @@
   <footer>
     <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
   </footer>
-
-  <script>
-    const themeSelect = document.querySelector("#theme-select");
-    const themeStylesheet = document.querySelector("#theme-stylesheet");
-    const savedTheme = localStorage.getItem("portfolio-theme");
-
-    if (savedTheme) {
-      themeStylesheet.setAttribute("href", savedTheme);
-      themeSelect.value = savedTheme;
-    }
-
-    themeSelect.addEventListener("change", function () {
-      const selectedTheme = themeSelect.value;
-      themeStylesheet.setAttribute("href", selectedTheme);
-      localStorage.setItem("portfolio-theme", selectedTheme);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
