@@ -7,10 +7,10 @@
   <title>IT Foundations – D316 | Casey Jones</title>
 
   <link rel="stylesheet" href="../styles.css" />
-  <link id="theme-stylesheet" rel="stylesheet" href="../theme-dark.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="../theme-toon-sketch.css" />
 </head>
 
-<body>
+<body data-theme-path="../">
   <header class="hero small-hero">
     <nav class="site-nav">
       <h1>Casey Jones</h1>
@@ -31,6 +31,7 @@
           </div>
         </div>
 
+        <a href="../certifications.html">Certifications</a>
         <a href="../roadmap.html">WGU Roadmap</a>
         <a href="../version-control.html">Version Control</a>
         <a href="../index.html#contact">Contact</a>
@@ -39,8 +40,12 @@
       <div class="theme-picker">
         <label for="theme-select">Theme</label>
         <select id="theme-select">
-          <option value="../theme-dark.css">Dark</option>
-          <option value="../theme-light.css">Light</option>
+          <option value="theme-blueprint-grid.css">[1] Blueprint Grid</option>
+          <option value="theme-brutalist-server.css">[2] Brutalist Server</option>
+          <option value="theme-cosmic-console.css">[3] Cosmic Console</option>
+          <option value="theme-dark.css">[4] Dark</option>
+          <option value="theme-electron-schematic.css">[5] Electron Schematic</option>
+          <option value="theme-toon-sketch.css" selected>[6] Toon Sketch</option>
         </select>
       </div>
     </nav>
@@ -70,9 +75,9 @@
       <h2>Course Completion</h2>
       <p><strong>Status:</strong> Completed</p>
       <p><strong>Start Date:</strong> July 12, 2026</p>
-      <p><strong>Completion Date:</strong> August 27, 2026</p>
+      <p><strong>Completion Date:</strong> August 25, 2026</p>
       <p><strong>Certification Exam:</strong> CompTIA A+ Core 1 220-1201</p>
-      <p><strong>Result:</strong> Passed, 832/900</p>
+      <p><strong>Date Passed:</strong> August 25, 2026</p>
     </section>
 
     <section class="card">
@@ -178,23 +183,6 @@
   <footer>
     <p>© 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.</p>
   </footer>
-
-  <script>
-    const themeSelect = document.querySelector("#theme-select");
-    const themeStylesheet = document.querySelector("#theme-stylesheet");
-    const savedTheme = localStorage.getItem("portfolio-theme");
-
-    if (savedTheme) {
-      const adjustedTheme = savedTheme.includes("../") ? savedTheme : "../" + savedTheme;
-      themeStylesheet.setAttribute("href", adjustedTheme);
-      themeSelect.value = adjustedTheme;
-    }
-
-    themeSelect.addEventListener("change", function () {
-      const selectedTheme = themeSelect.value;
-      themeStylesheet.setAttribute("href", selectedTheme);
-      localStorage.setItem("portfolio-theme", selectedTheme.replace("../", ""));
-    });
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>
