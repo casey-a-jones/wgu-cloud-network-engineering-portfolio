@@ -68,3 +68,7 @@ The theme options use different typography, backgrounds, cards, borders, shadows
 ## Theme Notes
 
 Toon Sketch is now the default theme. The shared `script.js` stores the selected theme in `localStorage` and normalizes the theme filename so the selection persists correctly between root pages and course pages inside the `courses/` folder.
+
+## Site Media
+
+- `assets/casey-headshot.jpg` is used as the larger navigation profile image and links to the LinkedIn profile in a new tab.

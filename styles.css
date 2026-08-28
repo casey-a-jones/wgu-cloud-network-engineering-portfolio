@@ -733,3 +733,43 @@ footer {
     flex-direction: column;
   }
 }
+
+/* Brand / profile image in navigation */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--heading-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand:hover,
+.brand:focus {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.brand-photo {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.08), 0 0 24px var(--logo-glow, rgba(56, 189, 248, 0.35));
+  flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+  .brand {
+    font-size: 1.25rem;
+  }
+
+  .brand-photo {
+    width: 72px;
+    height: 72px;
+  }
+}

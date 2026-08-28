@@ -137,3 +137,17 @@ th {
 .road-line { border-radius: 6px; }
 .stop-marker { border-radius: 4px; }
 footer { border-top: 1px solid rgba(203,235,255,0.34); }
+
+/* Blueprint-specific brand treatment */
+.brand {
+  font-family: 'Space Grotesk', 'IBM Plex Mono', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.brand-photo {
+  border-radius: 18px;
+  border-color: rgba(203,235,255,0.78);
+  box-shadow:
+    0 0 0 1px rgba(203,235,255,0.3),
+    0 0 22px rgba(139,211,255,0.24);
+}
