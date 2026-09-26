@@ -1,39 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Casey Jones' 100 Days of Python progress, documenting Python projects, programming concepts, Git version control, and hands-on learning."
+  />
 
   <title>100 Days of Python | Casey Jones</title>
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="theme-blueprint-grid.css">
+  <!-- Shared site layout -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Permanent site design -->
+  <link rel="stylesheet" href="theme-blueprint-grid.css" />
 </head>
+
 
 <body>
 
-  <main>
-    <section class="card">
-      <p class="eyebrow">Python Learning</p>
-      <h1>100 Days of Python</h1>
+  <!-- =========================================================
+       HEADER / NAVIGATION
+       ========================================================= -->
+  <header class="hero">
+
+    <nav class="site-nav">
+
+      <a
+        class="brand"
+        href="https://www.linkedin.com/in/casey-a-jones"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Casey Jones LinkedIn profile in a new tab"
+      >
+        <img
+          class="brand-photo"
+          src="assets/casey-headshot.jpg"
+          alt="Headshot of Casey Jones"
+        />
+
+        <span>Casey Jones</span>
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="index.html#about">
+          About
+        </a>
+
+        <a href="index.html#resume-focus">
+          Resume Focus
+        </a>
+
+        <a href="index.html#course-portfolio">
+          WGU Course Portfolio
+        </a>
+
+
+        <!-- Courses Dropdown -->
+        <div class="dropdown">
+
+          <button
+            class="dropdown-button"
+            type="button"
+          >
+            Courses ▾
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="courses/introduction-to-it-e004.html">
+              Introduction to IT – E004
+            </a>
+
+            <a href="courses/business-of-it-d336.html">
+              Business of IT - Applications – D336
+            </a>
+
+            <a href="courses/linux-foundations-d281.html">
+              Linux Foundations – D281
+            </a>
+
+            <a href="courses/it-foundations-d316.html">
+              IT Foundations – D316
+            </a>
+
+            <a href="courses/it-applications-d317.html">
+              IT Applications – D317
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <a href="100-days-of-python.html">
+          100 Days of Python
+        </a>
+
+        <a href="certifications.html">
+          Certifications
+        </a>
+
+        <a href="roadmap.html">
+          WGU Roadmap
+        </a>
+
+        <a href="version-control.html">
+          Version Control
+        </a>
+
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         PYTHON HERO
+         ========================================================= -->
+    <section class="hero-content">
+
+      <p class="eyebrow">
+        Python Programming Journey
+      </p>
+
+      <h2>
+        100 Days of Python
+      </h2>
 
       <p>
-        Documenting my progress through Angela Yu's 100 Days of Code:
-        The Complete Python Pro Bootcamp.
+        Documenting my progress through Angela Yu's 100 Days of Code,
+        including programming concepts, hands-on projects, Git version
+        control, and lessons learned along the way.
       </p>
+
     </section>
 
-    <section class="card">
-      <p class="eyebrow">Day 001</p>
+  </header>
 
-      <h2>Band Name Generator</h2>
+
+  <main>
+
+    <!-- =========================================================
+         DAY 001
+         ========================================================= -->
+    <section class="card">
+
+      <p class="eyebrow">
+        Day 001
+      </p>
+
+      <h2>
+        Band Name Generator
+      </h2>
 
       <p>
         Built a simple command-line program that asks the user for input
         and combines those values to generate a custom band name.
       </p>
 
-      <h3>Concepts Practiced</h3>
+      <h3>
+        Concepts Practiced
+      </h3>
 
       <ul>
         <li>print()</li>
@@ -53,8 +193,72 @@
           View Day 1 on GitHub
         </a>
       </p>
+
     </section>
+
+
+    <!-- =========================================================
+         DAY 002
+         ========================================================= -->
+    <section class="card">
+
+      <p class="eyebrow">
+        Day 002
+      </p>
+
+      <h2>
+        Tip Calculator
+      </h2>
+
+      <p>
+        Built a calculator that takes a bill total, tip percentage,
+        and party size, then calculates the total bill with tip
+        and how much each person should pay.
+      </p>
+
+      <h3>
+        Concepts Practiced
+      </h3>
+
+      <ul>
+        <li>Data types</li>
+        <li>Type conversion</li>
+        <li>Arithmetic operators</li>
+        <li>f-strings</li>
+        <li>Formatting decimals with .2f</li>
+        <li>Storing calculations in variables</li>
+      </ul>
+
+      <p>
+        <a
+          href="https://github.com/casey-a-jones/100-days-of-python/tree/main/day-002"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Day 2 on GitHub
+        </a>
+      </p>
+
+    </section>
+
   </main>
 
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+
+    <p>
+      © 2026 Casey Jones. Built as part of my AWS cloud learning portfolio.
+    </p>
+
+  </footer>
+
+
+  <!-- Shared JavaScript -->
+  <script src="script.js"></script>
+
 </body>
+
 </html>
